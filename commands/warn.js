@@ -24,7 +24,7 @@ exports.run = async (client, message, args) => {
     timeOfIncident: moment().format("MM DD YYYY HH MM SS") 
   });
 
-  return message.channel.send("Success, user has been warned.");
+  message.channel.send(embed);
 };
 
 exports.help = {

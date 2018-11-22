@@ -11,11 +11,14 @@ exports.run = async (client, message) => {
 
   let muteRole = message.guild.roles.find(r => r.name === message.settings.muteRole);
   
+  if(!member.roles.has(muteRole.id)) return message.channel.send("This user is not muted!");
+
   member.roles.remove(muteRole.id);
 
   message.channel.send("Success, unmuted member");
 
   modLogChannel.send(embed);
+  message.channel.send(embed);
 };
 
 exports.help = {

@@ -16,7 +16,6 @@ const client = new Discord.Client({
 client.config = require("./config.js");
 client.logger = require("./modules/logger.js");
 require("./modules/functions.js")(client);
-
 /*
   These store valuable data well need, for example a catalogue of all the commands and functions,
   Aliases for commands, etc.

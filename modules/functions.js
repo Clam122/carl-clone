@@ -33,35 +33,40 @@ module.exports = (client) => {
       let embed = new MessageEmbed()
         .setTitle("A member was banned.")
         .setDescription(`**Member banned**: <@${reciever.user.id}>\n**Moderator**: <@${giver.user.id}>\n **Reason**: \`${reason}\``)
-        .setColor(0xFF0000);
+        .setColor(0xFF0000)
+        .setImage("https://i.imgur.com/JeOHHmj.png");
       return embed;
     }
     case "Kick": {
       let embed = new MessageEmbed()
         .setTitle("A member was kicked.")
         .setDescription(`**Member kicked**: <@${reciever.user.id}>\n**Moderator**: <@${giver.user.id}>\n **Reason**: \`${reason}\``)
-        .setColor(0xFFD700);
+        .setColor(0xFFD700)
+        .setImage("https://i.imgur.com/3U3eFVE.png");
       return embed;
     }
     case "Warn": {
       let embed = new MessageEmbed()
         .setTitle("A member was warned.")
         .setDescription(`**Member warned**: <@${reciever.user.id}>\n**Moderator**: <@${giver.user.id}>\n **Reason**: \`${reason}\``)
-        .setColor(0x008B8B);
+        .setColor(0x008B8B)
+        .setImage("https://i.imgur.com/84ZH535.png?1");
       return embed;
     }
     case "Mute": {
       let embed = new MessageEmbed()
         .setTitle("A member was muted.")
         .setDescription(`**Member muted**: <@${reciever.user.id}>\n**Moderator**: <@${giver.user.id}>\n**Time**: ${time}`)
-        .setColor(0x800080);
+        .setColor(0x800080)
+        .setImage("https://i.imgur.com/ebgo91a.png");
       return embed;
     }
     case "Unmute": {
       let embed = new MessageEmbed()
         .setTitle("A member was unmuted.")
         .setDescription(`**Member unmuted**: <@${reciever.user.id}>\n**Moderator**: <@${giver.user.id}>`)
-        .setColor(0x90EE90);
+        .setColor(0x90EE90)
+        .setThumbnail("https://i.imgur.com/9Znmrvm.png");
       return embed;
     }
     }

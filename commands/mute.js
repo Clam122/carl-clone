@@ -35,6 +35,7 @@ exports.run = async (client, message, args) => {
   }
   
   modLogChannel.send(embed);
+  message.channel.send(embed);
 };
 
 exports.help = {
@@ -47,6 +48,6 @@ exports.help = {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
+  aliases: ["suppress"],
   permLevel: "Moderator"
 };

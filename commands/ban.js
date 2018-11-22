@@ -15,6 +15,7 @@ exports.run = async (client, message, args) => {
 
   modLogChannel.send(embed);
   await member.ban(reason);
+  message.channel.send(embed);
 };
 
 exports.help = {
@@ -27,6 +28,6 @@ exports.help = {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
-  permLevel: "Administrator"
+  aliases: ["oppress"],
+  permLevel: "Bot Owner"
 };

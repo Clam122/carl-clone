@@ -15,6 +15,7 @@ exports.run = async (client, message, args) => {
 
   modLogChannel.send(embed);
   await member.kick(reason);
+  message.channel.send(embed);
 };
 
 exports.help = {
